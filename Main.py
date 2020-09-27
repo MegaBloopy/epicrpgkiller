@@ -138,7 +138,7 @@ async def rpghunt():
         if checkheal >= checkhealvar:
             checkheal = 0
             await channel.send("rpg heal")
-        await asyncio.sleep(random.randint(38, 40))
+        await asyncio.sleep(random.randint(61, 63))
         await rpghunt()
 
 
