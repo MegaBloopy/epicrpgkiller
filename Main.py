@@ -10,16 +10,12 @@ from itertools import cycle
 from colorama import Fore
 from PIL import Image
 
-ctypes.windll.kernel32.SetConsoleTitleW(f'[EPIC-RPG Selfbot v{SELFBOT.__version__}] | Loading...')
-
 with open('config.json') as f:
     config = json.load(f)
 
 token = config.get('token')
 prefix = config.get('prefix')
 
-width = os.get_terminal_size().columns
-hwid = subprocess.check_output('wmic csproduct get uuid').decode().split('\n')[1].strip()
 loop = asyncio.get_event_loop()
 
 def startprint():
@@ -116,7 +112,6 @@ async def on_message(message):
 async def on_connect():
     Clear()
     startprint()
-    ctypes.windll.kernel32.SetConsoleTitleW(f'[EPIC-RPG Selfbot v{SELFBOT.__version__}] | Logged in as {Epicself.user.name}')
 
 checkhealvar = 25
 axecheck, checkheal = 0, 0
