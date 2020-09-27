@@ -62,27 +62,27 @@ async def on_message(message):
         if len(message.embeds) != 0:
             if message.embeds[0].fields:
                 if r"Get <:arenacookie:589286303087067156> arena cookies for each player you kill!\nOwners of the event will get an extra reward" in str(message.embeds[0].fields):
-                    await asyncio.sleep(2.8)
+                    await asyncio.sleep(3.1)
                     await message.channel.send("join")
                     arenas += 1
                     sys.stdout.write(f"EVENTS: Arenas: {arenas} || Bosses: {bosses} || Logs: {logs} || Fish: {fish} || Coins: {coins}\r\r")
                 elif r"**AN EPIC TREE HAS JUST GROWN <:woodenlog:555047053441630209> - HEIGHT:" in str(message.embeds[0].fields):
-                    await asyncio.sleep(2.9)
+                    await asyncio.sleep(3.1)
                     await message.channel.send("chop")
                     logs += 1
                     sys.stdout.write(f"EVENTS: Arenas: {arenas} || Bosses: {bosses} || Logs: {logs} || Fish: {fish} || Coins: {coins}\r")
                 elif r"Type **CATCH** (once) to collect" in str(message.embeds[0].fields):
-                    await asyncio.sleep(2.9)
+                    await asyncio.sleep(3.0)
                     await message.channel.send("catch")
                     coins += 1
                     sys.stdout.write(f"EVENTS: Arenas: {arenas} || Bosses: {bosses} || Logs: {logs} || Fish: {fish} || Coins: {coins}\r")
                 elif r"Type **FISH** (once) to collect" in str(message.embeds[0].fields):
-                    await asyncio.sleep(2.9)
+                    await asyncio.sleep(2.8)
                     await message.channel.send("fish")
                     fish += 1
                     sys.stdout.write(f"EVENTS: Arenas: {arenas} || Bosses: {bosses} || Logs: {logs} || Fish: {fish} || Coins: {coins}\r")
                 elif r"Type **TIME TO FIGHT** (once) to join the battle" in str(message.embeds[0].fields):
-                    await asyncio.sleep(1.8)
+                    await asyncio.sleep(2.1)
                     await message.channel.send("Time to fight")
                     sys.stdout.write(f"\rEVENTS: Arenas: {arenas} || Bosses: {bosses} || Logs: {logs} || Fish: {fish} || Coins: {coins}\r")
     if message.author.id == 555955826880413696 and f'**{Epicself.user.name}** is training in the field' in message.content:
