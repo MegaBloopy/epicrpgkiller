@@ -103,7 +103,7 @@ async def on_message(message):
     if message.author.id == 555955826880413696 and f'**{Epicself.user.name}** is training in the mine' in message.content:
         await asyncio.sleep(1.2)
         await message.channel.send("no")
-    if 'you are in the jail' in message.content and Epicself.user.mention in message.mentions:
+    if 'you are in the **jail**' in message.content and Epicself.user.mention in message.mentions:
         global rpgcheck
         rpgcheck = 1
     await Epicself.process_commands(message)
